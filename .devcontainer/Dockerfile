@@ -3,6 +3,14 @@ ARG VARIANT="bookworm"
 #FROM buildpack-deps:${VARIANT}-curl
 FROM mcr.microsoft.com/devcontainers/base:${VARIANT}
 
+COPY first-run-notice.txt /tmp/scripts/
+
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    # Restore man command
+    && yes | unminimize 2>&1 
+
+ENV LANG="C.UTF-8"
+
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
