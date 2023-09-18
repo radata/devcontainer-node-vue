@@ -7,7 +7,7 @@
     // Required when using an image. The name of an image in a container
     //"image": "devcontainer-cust:dev-01",
 	"build": {
-        "dockerfile": "./dev-01/Dockerfile",
+        "dockerfile": "./Dockerfile",
         "context": "."
     },
 
