@@ -5,7 +5,7 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 
     // Required when using an image. The name of an image in a container 
-    "image": "devcontainer-node-vue:16.20.1",
+    "image": "devcontainer-cust:dev-01",
 
     // A set of name-value pairs that sets or overrides environment variables for the container.
     "containerEnv": {},
